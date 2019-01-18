@@ -62,6 +62,9 @@ public class Controller {
             }
         } else if (counter == 1) {
             flashCardBtn.setText(answerList.get(currentIndex));
+            counter++;
+        } else if(counter == 2){
+            flashCardBtn.setText("Next Question");
             counter = 0;
         }
 
@@ -79,6 +82,8 @@ public class Controller {
         flashCardBtn.setDisable(true);
         restartBtn.setDisable(true);
         startBtn.setDisable(false);
+        flashCardBtn.setText("Start");
+
     }
 
     public void handleQuestionImport(ActionEvent actionEvent) {
@@ -100,6 +105,7 @@ public class Controller {
 
         if ((selectedFile != null) && (selectedFile.getPath().substring(selectedFile.getAbsolutePath().lastIndexOf('.')).equals(".txt"))) {
             fileChosen = selectedFile.getAbsolutePath();
+            String fileName = selectedFile.getName();
 
             try (BufferedReader br = new BufferedReader(new FileReader(selectedFile))) {
                 String line;
@@ -109,7 +115,7 @@ public class Controller {
                     }
                 }
 
-                showAlert("", "File added");
+                showAlert("", fileName + " added");
             } catch (IOException e) {
                 e.printStackTrace();
             }

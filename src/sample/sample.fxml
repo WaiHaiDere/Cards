@@ -6,18 +6,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
-        <Pane prefHeight="430.0" prefWidth="800.0">
+        <Pane id="mainBox" prefHeight="430.0" prefWidth="800.0">
             <children>
-                <Button fx:id="flashCardBtn" disable="true" layoutX="50.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleFlashCardAction" prefHeight="400.0" prefWidth="700.0" text="START" textAlignment="CENTER" wrapText="true">
+                <Button id="flashCard" fx:id="flashCardBtn" disable="true" layoutX="50.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleFlashCardAction" prefHeight="400.0" prefWidth="700.0" text="START" textAlignment="CENTER" wrapText="true">
                     <font>
-                        <Font name="Arial" size="30.0" />
+                        <Font name="Baskerville Old Face" size="40.0" />
                     </font>
                 </Button>
             </children>
         </Pane>
-        <Pane prefHeight="175.0" prefWidth="800.0">
+        <Pane id="buttonPane" prefHeight="175.0" prefWidth="800.0">
             <children>
                 <HBox layoutY="-1.0" prefHeight="175.0" prefWidth="800.0">
                     <children>
